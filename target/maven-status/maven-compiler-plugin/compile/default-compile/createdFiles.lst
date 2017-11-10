@@ -1,0 +1,11 @@
+com\c5\aspect\BaseAspect.class
+com\c5\dao\impl\BaseDaoUtilImpl.class
+com\c5\dao\UserDao.class
+com\c5\Util\SQLUtil.class
+com\c5\dao\BaseDaoUtil.class
+com\c5\entity\BaseEntity.class
+com\c5\service\impl\BaseServiceUtilImpl.class
+com\c5\web\UserController.class
+com\c5\Annotation\TableAnnotation.class
+com\c5\service\BaseServiceUtil.class
+com\c5\exceptions\NullEx.class

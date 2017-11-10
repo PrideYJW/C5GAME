@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd"
+                           default-autowire="byType">
+    <!-- sprcom.c5.web web 的扫描配置 -->
+    <context:component-scan base-package="com.c5.web"/>
+
+    <!-- 让方法支持responseBody的注解，并且返回结果交给fastjson去转换-->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <value>text/html;charset=UTF-8</value>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix" value="WEB-INF/jsp"></property>
+        <property name="suffix" value=".jsp"></property>
+
+    </bean>
+
+</beans>

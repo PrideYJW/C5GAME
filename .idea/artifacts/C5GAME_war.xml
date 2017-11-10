@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="C5GAME:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="C5GAME.war">
+      <element id="artifact" artifact-name="C5GAME:war exploded" />
+    </root>
+  </artifact>
+</component>
